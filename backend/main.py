@@ -202,7 +202,13 @@ async def generate_initial_diff(
                    - New APL: {new_apl_text}...
                 
                 Please analyze the second pair of documents and create a detailed JSON document that highlights the key differences between them. 
-                Follow the EXACT same format and structure as the validated example difference JSON.
+                Use the validated example as a reference for the semantic meaning of the changes.
+                Look for 3 types of changes: additions, updates, and redactions.
+                    Additions: entirely new
+                    Updates: materially rewritten or expanded
+                    Redactions: entirely removed
+                Pay special attention to content that exists in the old APL but is missing from the new APL. These redactions are critical compliance changes.
+                
                 Only include "meaninful" changes:
                 Definition of “meaningful” vs “ignore”  
 
@@ -226,17 +232,22 @@ async def generate_initial_diff(
                     * • Boilerplate notices (e.g., “Removed italics call‑out” or “Revised text now in plain font”)  
                     * • Purely administrative address/phone/email updates with no policy effect
 
-                
+
                 The JSON should include:
                 1. A title field with the APL numbers and dates
                 2. A summary field explaining the overall changes
-                3. Categories section with three arrays: Additions, Updates, and Redactions
-                   - Additions: New content in the new APL (include citations from new APL only)
-                   - Updates: Content that exists in both but has changed (include citations from both old and new APL)
-                   - Redactions: Content removed from the old APL (include citations from old APL only)
-                4. Each item should have a "bullet" field with a full description of the change and a "citations" field with page and line numbers
-                    - Make sure each description is very clear and lists the full change, be descriptive!
-                5. A conclusion field summarizing the impact of the changes
+                3. A bullets field with an array of bullet objects
+                (title: "", summary: "", bullets: [], conclusion:"")
+                4. A conclusion field summarizing the impact of the changes
+               
+                Within each bullet, it should be structued as:
+                (bullet_title: "", bullet_content: "", revision_type: "addition" | "update" | "redaction", citations: ())
+                1. Title: make sure each bullet has a fitting brief title in the title field
+                2. Content: the bullet_content should be the main content of the bullet.
+                3. Revision Type: A "revision_type" field with the original category (Addition, Update, or Redaction)
+                4. Citations: citations should look like: 
+                "citations": ("APL25": ("page": 3,"line": 12, "text": "..."), "APL21": null)
+                "citations": ("APL21": ("page": 13,"line": 2, "text": "..."), "APL18": ("page": 1,"line": 23, "text": "..."))                
                 
                 For citations, use the following keys:
                 - For the old APL: "{old_apl_info['citation_key']}"
@@ -247,6 +258,7 @@ async def generate_initial_diff(
                 - New APL year: {new_apl_info['year']}
                 
                 For each change, provide precise citations with page and line numbers.
+                Include the text of the citation in the citation object. Try to include as little as possible while being fully informative of the change. 
                 Make sure the citations line up with the actual location of the start of the context in the pdf.
                     -Double check each citation to make sure the page/line number is correct on its respecitve pdf.
 
@@ -332,7 +344,7 @@ async def generate_final_diff(new_apl_text: str, new_apl_estimate: str, initial_
 
                 ---
 
-                ### Definition of a "meaningful" change (include if *any* apply)
+                Definition of a "meaningful" change (include if *any* apply)
                 * Alters covered populations, benefits, services, or exclusions  
                 * Adds/deletes reporting, documentation, audit, or data requirements  
                 * Changes dollar amounts, penalties, or funding mechanisms  
@@ -342,7 +354,7 @@ async def generate_final_diff(new_apl_text: str, new_apl_estimate: str, initial_
                 * References new or rescinded statutes, regulations, or external guidance  
                 * Adds operational, clinical, or data‑standard procedures
 
-                ### Ignore List (DO NOT capture)
+                Ignore List (DO NOT capture)
                 * Formatting/style choices (fonts, italics, bold, citation style)  
                 * Pure title renames without duty change  
                 * Section renumbering, grammar fixes, punctuation, typographical cleanup  
@@ -353,25 +365,24 @@ async def generate_final_diff(new_apl_text: str, new_apl_estimate: str, initial_
                 The JSON should include:
                 1. A title field with the APL numbers and dates
                 2. A summary field explaining the overall changes
-                3. Categories section with three arrays: Additions, Updates, and Redactions
-                   - Additions: New content in the new APL (include citations from new APL only)
-                   - Updates: Content that exists in both but has changed (include citations from both old and new APL)
-                   - Redactions: Content removed from the old APL (include citations from old APL only)
-                4. Each item should have a "bullet" field with a full description of the change and a "citations" field with page and line numbers
-                    - Make sure each description is very clear and lists the full change, be descriptive!
-                5. A conclusion field summarizing the impact of the changes
-                
-                For citations, use the same citation format as the initial diff JSON.
-                
-                
-                When referring to years in the summary or elsewhere, use the same year as the initial diff JSON.
-              
+                3. A bullets field with an array of bullet objects
+                (title: "", summary: "", bullets: [], conclusion:"")
+                4. A conclusion field summarizing the impact of the changes
+               
+                Within each bullet, it should be structued as:
+                (bullet_title: "", bullet_content: "", revision_type: "addition" | "update" | "redaction", citations: ())
+                1. Title: make sure each bullet has a fitting brief title in the title field
+                2. Content: the bullet_content should be the main content of the bullet.
+                3. Revision Type: A "revision_type" field with the original category (Addition, Update, or Redaction)
+                4. Citations: citations should look like: 
+                "citations": ("APL25": ("page": 3,"line": 12, "text": "..."), "APL21": null)
+                "citations": ("APL21": ("page": 13,"line": 2, "text": "..."), "APL18": ("page": 1,"line": 23, "text": "..."))                
                 
                 For each change, provide precise citations with page and line numbers.
+                Include the text of the citation in the citation object. Try to include as little as possible while being fully informative of the change. 
                 Make sure the citations line up with the actual location of the start of the context in the pdf.
                     -Double check each citation to make sure the page/line number is correct on its respecitve pdf.
 
-                Format text with ** for bold and * for italic when appropriate.
                 Make sure the output is valid JSON that can be parsed by a JSON parser.
                 """
                     }
@@ -406,7 +417,7 @@ async def score_and_categorize_changes(diff_json: str, model: str) -> str:
                 
                 Please score each change on a scale of 1-10 based on the following criteria:
 
-                ### Definition of a "meaningful" change (score higher if more apply)
+                Definition of a "meaningful" change (score higher if more apply)
                 * Alters covered populations, benefits, services, or exclusions  
                 * Adds/deletes reporting, documentation, audit, or data requirements  
                 * Changes dollar amounts, penalties, or funding mechanisms  
@@ -416,7 +427,7 @@ async def score_and_categorize_changes(diff_json: str, model: str) -> str:
                 * References new or rescinded statutes, regulations, or external guidance  
                 * Adds operational, clinical, or data‑standard procedures
 
-                ### Ignore List (score lower if these are the only changes)
+                Ignore List (score lower if these are the only changes)
                 * Formatting/style choices (fonts, italics, bold, citation style)  
                 * Pure title renames without duty change  
                 * Section renumbering, grammar fixes, punctuation, typographical cleanup  
@@ -433,28 +444,27 @@ async def score_and_categorize_changes(diff_json: str, model: str) -> str:
                 
                 For each change, add a "score" field with the numeric score (1-10) 
 
-                The output JSON should have the following structure:
+                The JSON should include:
                 1. A title field with the APL numbers and dates
                 2. A summary field explaining the overall changes
-                3. A conclusion field summarizing the impact of the changes
-                4. A bullets field with an array of bullet objects
+                3. A bullets field with an array of bullet objects
                 (title: "", summary: "", bullets: [], conclusion:"")
-
-
-                within each bullet, it should be structued as:
-                (bullet_title: "", bullet_content: "", score: int, revision_type: "addition" | "update" | "redaction", citations: ())
-
-                citations should look like: 
-                "citations": ("APL25": ("page": 3,"line": 12), "APL21": null)
-                "citations": ("APL21": ("page": 13,"line": 2), "APL18": ("page": 1,"line": 23))
+                4. A conclusion field summarizing the impact of the changes
                
-
-                Each item should have:
-                1. All the original fields (bullet, citations)
-                    -make sure each bullet has a fitting brief title in the title field
-                    -the bullet_content should be the main content of the bullet.
-                2. A "score" field with the numeric score (1-10)
-                3. A "type" field with the original category (Addition, Update, or Redaction)
+                Within each bullet, it should be structued as:
+                (bullet_title: "", bullet_content: "", score: int,revision_type: "addition" | "update" | "redaction", citations: ())
+                1. Title: make sure each bullet has a fitting brief title in the title field
+                2. Content: the bullet_content should be the main content of the bullet.
+                3. Score: A "score" field with the numeric score (1-10)
+                4. Revision Type: A "revision_type" field with the original category (Addition, Update, or Redaction)
+                5. Citations: citations should look like: 
+                "citations": ("APL25": ("page": 3,"line": 12, "text": "..."), "APL21": null)
+                "citations": ("APL21": ("page": 13,"line": 2, "text": "..."), "APL18": ("page": 1,"line": 23, "text": "..."))                
+                
+                For each change, provide precise citations with page and line numbers.
+                Include the text of the citation in the citation object. Try to include as little as possible while being fully informative of the change. 
+                Make sure the citations line up with the actual location of the start of the context in the pdf.
+                    -Double check each citation to make sure the page/line number is correct on its respecitve pdf.
                 
                 -NOTE: Bullets should be sorted by score, highest to lowest.
                 Make sure the output is valid JSON that can be parsed by a JSON parser.

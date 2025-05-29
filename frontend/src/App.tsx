@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Switch } from './components/ui/switch'
 import { Label } from './components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './components/ui/select'
+import { CitationPreview } from './components/CitationPreview'
 
 interface ChangeTypeChipProps {
   type: 'Addition' | 'Update' | 'Redaction'
@@ -506,15 +507,21 @@ function App() {
                     {/* Format the categories on separate lines */}
                     <div className="mt-2">
                       <p>
-                        <ChangeTypeChip type="Addition" className="mr-2" />
+                        <span className="scale-75 inline-block transform-gpu">
+                          <ChangeTypeChip type="Addition" className="mr-2" />
+                        </span>
                         <strong>Additions</strong> (entirely new in {getYearFromAPL(newAPL?.name)})
                       </p>
                       <p>
-                        <ChangeTypeChip type="Update" className="mr-2" />
+                        <span className="scale-75 inline-block transform-gpu">
+                          <ChangeTypeChip type="Update" className="mr-2" />
+                        </span>
                         <strong>Updates</strong> ({getYearFromAPL(oldAPL?.name)} language materially rewritten or expanded)
                       </p>
                       <p>
-                        <ChangeTypeChip type="Redaction" className="mr-2" />
+                        <span className="scale-75 inline-block transform-gpu">
+                          <ChangeTypeChip type="Redaction" className="mr-2" />
+                        </span>
                         <strong>Redactions</strong> (requirements present in {getYearFromAPL(oldAPL?.name)} that disappear in {getYearFromAPL(newAPL?.name)})
                       </p>
                     </div>
@@ -544,23 +551,43 @@ function App() {
                             {renderFormattedText(item.bullet_content)}
                           </div>
                           
-                          {/* Citations based on change type */}
+                          {/* Citations based on change type with hover preview */}
                           {item.revision_type.toLowerCase() === 'addition' && item.citations?.[getAPLCitationKey(newAPL?.name)] && (
-                            <div className="text-sm text-gray-500 mt-2">
-                              {`${newAPL?.name.replace('.pdf', '')}: Page ${item.citations[getAPLCitationKey(newAPL?.name)].page}, Line ${item.citations[getAPLCitationKey(newAPL?.name)].line}`}
+                            <div className="text-sm mt-2 pl-8">
+                              <CitationPreview 
+                                citation={item.citations[getAPLCitationKey(newAPL?.name)]}
+                                documentName={newAPL?.name || ''}
+                              />
                             </div>
                           )}
                           
                           {item.revision_type.toLowerCase() === 'update' && (
-                            <div className="text-sm text-gray-500 mt-2">
-                              <div>{oldAPL?.name.replace('.pdf', '')}: Page {item.citations?.[getAPLCitationKey(oldAPL?.name)]?.page || 'N/A'}, Line {item.citations?.[getAPLCitationKey(oldAPL?.name)]?.line || 'N/A'}</div>
-                              <div>{newAPL?.name.replace('.pdf', '')}: Page {item.citations?.[getAPLCitationKey(newAPL?.name)]?.page || 'N/A'}, Line {item.citations?.[getAPLCitationKey(newAPL?.name)]?.line || 'N/A'}</div>
+                            <div className="text-sm mt-2 pl-8">
+                              {item.citations?.[getAPLCitationKey(oldAPL?.name)] && (
+                                <div className="mb-1">
+                                  <CitationPreview 
+                                    citation={item.citations[getAPLCitationKey(oldAPL?.name)]}
+                                    documentName={oldAPL?.name || ''}
+                                  />
+                                </div>
+                              )}
+                              {item.citations?.[getAPLCitationKey(newAPL?.name)] && (
+                                <div>
+                                  <CitationPreview 
+                                    citation={item.citations[getAPLCitationKey(newAPL?.name)]}
+                                    documentName={newAPL?.name || ''}
+                                  />
+                                </div>
+                              )}
                             </div>
                           )}
                           
                           {item.revision_type.toLowerCase() === 'redaction' && item.citations?.[getAPLCitationKey(oldAPL?.name)] && (
-                            <div className="text-sm text-gray-500 mt-2">
-                              {`${oldAPL?.name.replace('.pdf', '')}: Page ${item.citations[getAPLCitationKey(oldAPL?.name)].page}, Line ${item.citations[getAPLCitationKey(oldAPL?.name)].line}`}
+                            <div className="text-sm mt-2 pl-8">
+                              <CitationPreview 
+                                citation={item.citations[getAPLCitationKey(oldAPL?.name)]}
+                                documentName={oldAPL?.name || ''}
+                              />
                             </div>
                           )}
                         </div>
