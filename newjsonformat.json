@@ -1,0 +1,271 @@
+{
+  "title": "Comprehensive Difference Matrix — APL 25-005 (Feb 12 2025) vs. APL 21-004 (May 3 2022)",
+  "summary": "This update to the All Plan Letter (APL) introduces sweeping regulatory, operational, and enforcement changes in line with 2024 federal Section 1557 requirements. APL 25-005 delivers new mandates for nondiscrimination, reporting, attestation, alternative formats, and data sharing, while imposing stricter timelines, documentation, and compliance obligations for managed care plans. The changes also redefine covered populations, protected characteristics, and establish explicit consequences for noncompliance. These combine to significantly alter health plan administration and member service protocols.",
+  "bullets": [
+    {
+      "bullet_title": "Section 1557 Regulatory Overhaul and Coordinator Role",
+      "bullet_content": "APL 25-005 incorporates the May 6, 2024 HHS Final Rule for Section 1557, eliminating the earlier 'four-factor analysis' in favor of prescriptive requirements, expands the scope of protected characteristics to more granular forms of sex discrimination and telehealth, requires the annual delivery of nondiscrimination and Notice of Availability (taglines) documents in English plus the 15 most common non-English languages, and introduces the formal role of a 'Section 1557 Coordinator' with defined discrimination-grievance responsibilities.",
+      "score": 10,
+      "revision_type": "addition",
+      "citations": {
+        "APL25": {
+          "page": 3,
+          "line": 15
+        },
+        "APL21": null
+      }
+    },
+    {
+      "bullet_title": "Mandated Alternative Format Data Tracking and Reporting",
+      "bullet_content": "APL 25-005 introduces a requirement for MCPs and their subcontractors/network providers to actively track, share, and report Member Alternative Format Selection (AFS) data through a centralized process specified by DHCS, receive weekly AFS files, and use that data to provide materials in accessible formats (e.g., large print, Braille, audio, etc).",
+      "score": 9,
+      "revision_type": "addition",
+      "citations": {
+        "APL25": {
+          "page": 13,
+          "line": 24
+        },
+        "APL21": null
+      }
+    },
+    {
+      "bullet_title": "Mandated 90-Day Window for Policy/Procedure Submissions",
+      "bullet_content": "Upon issue of this APL, MCPs must submit updated contractually required policies and procedures (P&Ps) to the MCOD Contract Oversight Portal within 90 days, with noncompliance subject to corrective action plans (CAPs) or monetary sanctions.",
+      "score": 9,
+      "revision_type": "addition",
+      "citations": {
+        "APL25": {
+          "page": 15,
+          "line": 37
+        },
+        "APL21": null
+      }
+    },
+    {
+      "bullet_title": "Explicit Sanctions and Corrective Actions for Noncompliance",
+      "bullet_content": "The APL now states that DHCS may impose CAPs, administrative, or monetary sanctions for noncompliance with the APL, including failure to submit policies/procedures within the specified deadline, extending enforcement exposure beyond prior language.",
+      "score": 9,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 15,
+          "line": 45
+        },
+        "APL21": {
+          "page": 15,
+          "line": 14
+        }
+      }
+    },
+    {
+      "bullet_title": "Annual Attestation for Discrimination Grievance Transmission",
+      "bullet_content": "Plans must now submit a yearly attestation every December via the Managed Care Operations Division SharePoint Submission Portal certifying that all required discrimination grievance documentation has been transmitted to DHCS OCR.",
+      "score": 8,
+      "revision_type": "addition",
+      "citations": {
+        "APL25": {
+          "page": 8,
+          "line": 37
+        },
+        "APL21": null
+      }
+    },
+    {
+      "bullet_title": "Three-Year Minimum Record Retention for Discrimination Grievances",
+      "bullet_content": "MCPs are now required to retain all records related to discrimination grievances (including details of resolution, timeline, and underlying documents) for at least three calendar years from the date the grievance is resolved, per new federal requirements.",
+      "score": 8,
+      "revision_type": "addition",
+      "citations": {
+        "APL25": {
+          "page": 8,
+          "line": 48
+        },
+        "APL21": null
+      }
+    },
+    {
+      "bullet_title": "Broader and More Granular List of Protected Characteristics",
+      "bullet_content": "The protected classes pursuant to Section 1557 and state law are expanded and restated to directly match the 2024 federal rule categories (explicitly adding intersex traits, sex characteristics, pregnancy/related conditions, sexual orientation, gender identity, sex stereotypes).",
+      "score": 8,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 3,
+          "line": 21
+        },
+        "APL21": {
+          "page": 4,
+          "line": 16
+        }
+      }
+    },
+    {
+      "bullet_title": "Compliance Effective Dates and Dataset Update Timelines Revised",
+      "bullet_content": "The compliance date for the new dataset is August 11, 2025 (vs July 6, 2022 in prior APL), reflecting a new three-year review/update rule; compliance for some nondiscrimination requirements is also pegged to federal deadlines.",
+      "score": 7,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 5,
+          "line": 8
+        },
+        "APL21": {
+          "page": 5,
+          "line": 12
+        }
+      }
+    },
+    {
+      "bullet_title": "Language and Scope of Notice of Availability (Taglines)",
+      "bullet_content": "In alignment with 2024 amendments, 'taglines' are now formally designated as 'Notice of Availability' and must be present in at least the top 18 non-English languages (15 federal + 3 state add-ons), clearly listed and deployed in additional locations with heightened font and display requirements.",
+      "score": 7,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 9,
+          "line": 7
+        },
+        "APL21": {
+          "page": 10,
+          "line": 3
+        }
+      }
+    },
+    {
+      "bullet_title": "Refined Threshold/Concentration Language Population Definition",
+      "bullet_content": "Multiple references to 'eligible beneficiaries' in thresholds/concentrations (for access and translation requirements) are changed to 'Potential Members' (a technical term from the MCP Contract), signaling a clarified base population for which language mandates apply.",
+      "score": 6,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 4,
+          "line": 11
+        },
+        "APL21": {
+          "page": 4,
+          "line": 15
+        }
+      }
+    },
+    {
+      "bullet_title": "Expanded and Clarified Interpreter/Translator Definitions",
+      "bullet_content": "The standards for determining interpreter/translator qualification now incorporate all new 2024 Section 1557 requirements—particularly impartiality, emotional context, modality (relay interpretation included), and correct documentation of member requests (for using family/friends).",
+      "score": 6,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 11,
+          "line": 6
+        },
+        "APL21": {
+          "page": 11,
+          "line": 7
+        }
+      }
+    },
+    {
+      "bullet_title": "Limitations on Use of Family/Friends/Minors as Interpreters",
+      "bullet_content": "Tighter compliance rules around documenting member requests/consent to use non-professional interpreters—including steps for ensuring privacy/confidentiality and requirement for qualified interpreter to conduct the request from the member in private—appear in the new APL.",
+      "score": 6,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 12,
+          "line": 6
+        },
+        "APL21": {
+          "page": 12,
+          "line": 10
+        }
+      }
+    },
+    {
+      "bullet_title": "Clarified and Operationalized Alternative Format Data-Sharing",
+      "bullet_content": "The 2025 APL describes an explicit workflow: DHCS now sends weekly files of Member alternative format preferences to MCPs, who must deploy those in communications and share them as needed with network providers and subcontractors.",
+      "score": 6,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 13,
+          "line": 26
+        },
+        "APL21": {
+          "page": 13,
+          "line": 14
+        }
+      }
+    },
+    {
+      "bullet_title": "Updates to MCOD Portal Submission Processes",
+      "bullet_content": "All updated policies/procedures, attestations, and discrimination grievance compliance certifications must now be submitted via the Managed Care Operations Division (MCOD) SharePoint Portal, updating and consolidating the previous reporting mechanism.",
+      "score": 5,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 8,
+          "line": 40
+        },
+        "APL21": null
+      }
+    },
+    {
+      "bullet_title": "Translation Requirements—Written Chinese Protocol Shift",
+      "bullet_content": "The default for Chinese written materials shifts to Simplified Chinese unless the Member expressly requests Traditional Chinese, whereas previously the default was Traditional Chinese. This brings the MCP translation protocol into alignment with Medi-Cal FFS and industry standards.",
+      "score": 5,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 5,
+          "line": 17
+        },
+        "APL21": {
+          "page": 5,
+          "line": 20
+        }
+      }
+    },
+    {
+      "bullet_title": "Prohibition on Use of QR Codes In Lieu of Printed Notices",
+      "bullet_content": "Quick response (QR) codes may now be used as a supplement, but may not replace or serve 'in lieu of' physical nondiscrimination and availability notices.",
+      "score": 4,
+      "revision_type": "addition",
+      "citations": {
+        "APL25": {
+          "page": 6,
+          "line": 35
+        },
+        "APL21": null
+      }
+    },
+    {
+      "bullet_title": "Font Size and Notice/Posting Location Enhancements",
+      "bullet_content": "The required font size for the nondiscrimination notice and Notice of Availability is increased to at least 20-point sans serif in physical locations and digital posting (up from 12-point); explicit 'clear and prominent' placement requirements are added, enhancing visibility and accessibility.",
+      "score": 4,
+      "revision_type": "update",
+      "citations": {
+        "APL25": {
+          "page": 6,
+          "line": 25
+        },
+        "APL21": {
+          "page": 6,
+          "line": 14
+        }
+      }
+    },
+    {
+      "bullet_title": "Redaction of Rolling Law Change Notification Requirement",
+      "bullet_content": "The 2021 policy required resubmission of updated policies/procedures 'following any substantive change in federal or state nondiscrimination law.' The 2025 version subsumes this under a clarified 90-day reporting mandate and does not restate the rolling notification requirement.",
+      "score": 3,
+      "revision_type": "redaction",
+      "citations": {
+        "APL25": null,
+        "APL21": {
+          "page": 15,
+          "line": 1
+        }
+      }
+    }
+  ],
+  "conclusion": "APL 25-005 delivers major regulatory, operational, and enforcement updates that will shape managed care plan compliance for years to come. The introduction of prescriptive Section 1557 mandates, annual attestations, new data-sharing protocols, tighter compliance timelines, and strong enforcement levers marks a shift toward more rigorous oversight and documentation. Most changes directly affect plan administration, member communications, translation, accessibility, and regulatory reporting, making compliance planning and system changes critical for all affected health plans."
+}

@@ -1,0 +1,243 @@
+{
+  "title": "Comprehensive Difference Matrix — APL 25-005 (Feb 12 2025) vs. APL 21-004 (May 3 2022)",
+  "summary": "APL 25-005 retains strong nondiscrimination, threshold language, and language assistance protections from APL 21-004 but introduces new operational duties, federal updates, tighter timelines, and expanded accessibility and reporting. Notable changes align with the 2024 Section 1557 Final Rule, reshaping documentation, data sharing, grievance management, and enforcement. Definitions, roles, and procedures for providing language and disability access are clarified or expanded, and compliance/corrective action standards are reinforced.",
+  "categories": {
+    "Tier1": [
+      {
+        "bullet": "**Mandated Annual Notice of Availability (NOA) & Language Distribution Expansion** – Plans must provide a stand-alone ‘Notice of Availability of Language Assistance and Auxiliary Aids and Services’ every year to members, potential members, and the public, in English, at least 15 top non-English languages, 3 state-mandated languages, and accessible formats. Based on 2024 federal regulation, this greatly increases specificity and compliance burden.",
+        "citations": {
+          "APL25": {
+            "page": 3,
+            "line": 29
+          }
+        },
+        "score": 10,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**Comprehensive Discrimination Grievance Documentation & Retention** – MCPs must retain all discrimination grievance records, including complaints, contacts, actions, and outcomes for at least three years, addressing new federal documentation mandates and supporting audit and enforcement.",
+        "citations": {
+          "APL25": {
+            "page": 8,
+            "line": 42
+          }
+        },
+        "score": 9,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**90-Day Deadline for Updated Policy & Procedure (P&P) Submission** – MCPs are required to update and submit P&Ps reflecting new APL requirements within 90 days or face corrective action/possible sanctions, shifting policy update cadence from prior versions.",
+        "citations": {
+          "APL25": {
+            "page": 15,
+            "line": 23
+          }
+        },
+        "score": 9,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**Alternate Format Data – Ongoing Reporting and DHCS Data Feeds** – The 2025 APL mandates use of a DHCS data process guide and weekly operational files for tracking alternative format requests, with required cascading/sharing of data to all relevant subcontractors and providers.",
+        "citations": {
+          "APL25": {
+            "page": 13,
+            "line": 41
+          }
+        },
+        "score": 8,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**Expanded Discrimination Grievance Procedures (2024 Federal Compliance)** – Grievance process is broadened to name new federal requirements, retention/data-submission elements, annual attestations, and procedures for prompt/equitable resolution and dual reporting.",
+        "citations": {
+          "APL25": {
+            "page": 7,
+            "line": 18
+          },
+          "APL21": {
+            "page": 7,
+            "line": 1
+          }
+        },
+        "score": 8,
+        "type": "Update"
+      }
+    ],
+    "Tier2": [
+      {
+        "bullet": "**Mandated Attestation of Discrimination Grievance Reporting** – MCPs must submit a yearly attestation in December via SharePoint confirming discrimination grievance data was reported to DHCS OCR, increasing accountability and audit trail.",
+        "citations": {
+          "APL25": {
+            "page": 8,
+            "line": 27
+          }
+        },
+        "score": 7,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**Written Translation – Human Review for Machine Translation, Tightened “Qualified Translator” Definition** – All machine translation for critical material must be reviewed by a qualified translator; ‘qualified’ now includes preservation of tone/emotion and bans alteration.",
+        "citations": {
+          "APL25": {
+            "page": 12,
+            "line": 24
+          },
+          "APL21": {
+            "page": 12,
+            "line": 2
+          }
+        },
+        "score": 7,
+        "type": "Update"
+      },
+      {
+        "bullet": "**Oral Interpretation – Stricter “Qualified Interpreter” Standards & Consent Rules** – Now requires interpreter proficiency in all relevant languages (including for relay interpreting) and careful documentation for member-accompanying adult interpreters.",
+        "citations": {
+          "APL25": {
+            "page": 11,
+            "line": 3
+          },
+          "APL21": {
+            "page": 11,
+            "line": 7
+          }
+        },
+        "score": 7,
+        "type": "Update"
+      },
+      {
+        "bullet": "**Alternative Format Fulfillment – Full Subcontractor Cascade & Data Sharing** – Requirements expand to include real-time data sharing of format selections and requests with all network/outreach and subcontractor partners, not just internal tracking.",
+        "citations": {
+          "APL25": {
+            "page": 13,
+            "line": 47
+          },
+          "APL21": {
+            "page": 13,
+            "line": 31
+          }
+        },
+        "score": 7,
+        "type": "Update"
+      },
+      {
+        "bullet": "**Expanded Enforcement & Sanctions Language** – Specifies failure to meet requirements (language, formats, discrimination response) may lead to corrective action plans or monetary/administrative sanctions under current or future DHCS policies.",
+        "citations": {
+          "APL25": {
+            "page": 16,
+            "line": 6
+          }
+        },
+        "score": 6,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**Switch to “Potential Member” Denominator for Language Thresholds** – Basis for language calculation/reporting changes from ‘eligible beneficiary’ to ‘potential member’ as defined in contract, slightly altering reporting universe.",
+        "citations": {
+          "APL25": {
+            "page": 4,
+            "line": 23
+          },
+          "APL21": {
+            "page": 4,
+            "line": 19
+          }
+        },
+        "score": 6,
+        "type": "Update"
+      },
+      {
+        "bullet": "**Notice of Availability & Taglines – Codified, Expanded, and Modernized** – Taglines become a distinct annual stand-alone notice; font/format/location are specified; expanded to cover all 18 designated languages and alternative formats.",
+        "citations": {
+          "APL25": {
+            "page": 9,
+            "line": 3
+          },
+          "APL21": {
+            "page": 9,
+            "line": 1
+          }
+        },
+        "score": 6,
+        "type": "Update"
+      },
+      {
+        "bullet": "**Explicit Chinese Translation Timeline & Preference Requirements** – By August 11, 2025, written translation must be in Chinese character set preferred by the member, defaulting to Simplified rather than Traditional when unspecified, and clarifying prior ambiguity.",
+        "citations": {
+          "APL25": {
+            "page": 5,
+            "line": 22
+          }
+        },
+        "score": 6,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**Effective Communication for Members with Disabilities – Explicit Companion Duties** – Requirements expand to companions of members with disabilities, clarify auxiliary aid modalities, notification, privacy, and response time for accessibility.",
+        "citations": {
+          "APL25": {
+            "page": 13,
+            "line": 14
+          },
+          "APL21": {
+            "page": 13,
+            "line": 1
+          }
+        },
+        "score": 5,
+        "type": "Update"
+      }
+    ],
+    "Tier3": [
+      {
+        "bullet": "**Font Enforcement for Physical Posting** – Notices must be at least 20-point sans serif in public areas; QR codes may supplement but not replace; codifies what was previously guidance.",
+        "citations": {
+          "APL25": {
+            "page": 6,
+            "line": 26
+          }
+        },
+        "score": 4,
+        "type": "Addition"
+      },
+      {
+        "bullet": "**Nondiscrimination Posting – Updated Format, Frequency, and Location Details** – Annual physical posting requirements, minimum font, location clarification, and expanded list of protected classes; QR code-only delivery banned.",
+        "citations": {
+          "APL25": {
+            "page": 6,
+            "line": 20
+          },
+          "APL21": {
+            "page": 6,
+            "line": 12
+          }
+        },
+        "score": 4,
+        "type": "Update"
+      },
+      {
+        "bullet": "**Elimination of Obsolete “Four-Factor” Federal Analysis for Language Taglines** – Removes outdated reference in favor of new federal requirements.",
+        "citations": {
+          "APL21": {
+            "page": 3,
+            "line": 26
+          }
+        },
+        "score": 3,
+        "type": "Redaction"
+      },
+      {
+        "bullet": "**Removal of Old Compliance Window Reference (July 6, 2022)** – Updates the explicit compliance date and transition period to the new 2025 window.",
+        "citations": {
+          "APL21": {
+            "page": 5,
+            "line": 20
+          }
+        },
+        "score": 2,
+        "type": "Redaction"
+      }
+    ]
+  },
+  "conclusion": "APL 25-005 represents a substantive compliance, operational, and enforcement shift for MCPs. Adopting 2024 federal requirements, it increases the frequency and specificity of outreach, documentation, reporting, and grievance response related to language access and nondiscrimination. Tier 1 changes require significant process overhaul—including annual notices, complex record retention, multi-entity data sharing, and stricter timelines—while Tier 2 changes expand scope, accountability, and contractor/subcontractor responsibilities. Tier 3 changes, though lower impact, standardize formatting and remove outdated federal references. Plans should promptly adjust workflows, policies, and communication channels to avoid sanctions and ensure compliance by the August 2025 deadline."
+}

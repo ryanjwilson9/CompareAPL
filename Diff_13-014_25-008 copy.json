@@ -1,0 +1,185 @@
+{
+  "title": "Comprehensive Difference Matrix — APL 25‑008 (May 5 2025) vs. APL 13‑014 (Oct 28 2013)",
+  "summary": "APL 25‑008 preserves the core hospice‑benefit structure set out in APL 13‑014 but adds a much tighter layer of compliance, documentation, payment and program‑integrity requirements. The matrix below groups the changes into **Additions** (entirely new in 2025), **Updates** (2013 language materially rewritten or expanded) and **Redactions** (requirements present in 2013 that disappear in 2025). Each entry keeps the full descriptive text so it can drop straight into a table or migration checklist.",
+  "categories": {
+    "Additions": [
+      {
+        "bullet": "**Election notice & liability** – Hospice providers must transmit the DHCS *Medi‑Cal Hospice Program Election Notice* (and any required addendum) to the member’s managed care plan **within five calendar days of certification/election**; if that deadline is missed, the hospice—not the plan—bears financial responsibility for any services rendered before the form is accepted.",
+        "citations": {
+          "APL25": {
+            "page": 3,
+            "line": 12
+          },
+          "APL13": null
+        }
+      },
+      {
+        "bullet": "**Revocation form deadline** – When a member revokes hospice, the provider must submit the member‑signed revocation statement to the plan **within five calendar days**. Failure to do so places the cost of any days after the effective date of revocation on the hospice provider.",
+        "citations": {
+          "APL25": {
+            "page": 8,
+            "line": 4
+          },
+          "APL13": null
+        }
+      },
+      {
+        "bullet": "**Out‑of‑network hospice & continuity‑of‑care safeguards** – Managed care plans may restrict payment to in‑network hospices, **unless services are unavailable**. When a member elects an out‑of‑network provider, the plan must establish a single‑case or letter‑of‑agreement contract, verify Medicare certification, California Department of Public Health license and NPI, and honor continuity‑of‑care rights if the patient was already on service prior to enrollment.",
+        "citations": {
+          "APL25": {
+            "page": 3,
+            "line": 30
+          },
+          "APL13": null
+        }
+      },
+      {
+        "bullet": "**Face‑to‑face encounter requirement** – Beginning with the third benefit period and **every period thereafter**, a hospice physician or nurse practitioner must perform and document an in‑person encounter no more than **30 days before** the period starts (or within two days of a late admission) to confirm continued eligibility.",
+        "citations": {
+          "APL25": {
+            "page": 9,
+            "line": 40
+          },
+          "APL13": null
+        }
+      },
+      {
+        "bullet": "**Fraud, Waste & Abuse controls (new Section VI)** – APL 25‑008 adds a stand‑alone program‑integrity section directing plans to implement member risk flags, encounter‑data completeness audits, pre‑ and post‑payment documentation checks and to reference recent state and CMS hospice integrity initiatives. Non‑compliance may trigger corrective‑action plans and monetary sanctions.",
+        "citations": {
+          "APL25": {
+            "page": 16,
+            "line": 5
+          },
+          "APL13": null
+        }
+      },
+      {
+        "bullet": "**90‑day policy‑and‑procedure (P&P) submission window** – Plans must upload updated hospice P&Ps *or* a “no‑change” attestation to the MCOD Submission Portal **within 90 days** of the letter’s effective date and cascade requirements to downstream entities; DHCS may impose CAPs or fines for late or missing submissions.",
+        "citations": {
+          "APL25": {
+            "page": 17,
+            "line": 10
+          },
+          "APL13": null
+        }
+      },
+      {
+        "bullet": "**Dually eligible SNF residents** – For Medicare–Medi‑Cal duals who reside in skilled nursing facilities, the managed care plan must reimburse hospice providers for room & board **directly**, and may not require the hospice to attach a Medicare remit or explanation of benefits to the claim.",
+        "citations": {
+          "APL25": {
+            "page": 13,
+            "line": 2
+          },
+          "APL13": null
+        }
+      }
+    ],
+    "Updates": [
+      {
+        "bullet": "**Certification of Terminal Illness expanded** – The 2025 letter now specifies that the initial certification must include signatures from *both* the hospice medical director and the attending physician (if any), restates the six‑month prognosis standard, and describes acceptable electronic signature formats—details that were either optional or absent in 2013.",
+        "citations": {
+          "APL25": {
+            "page": 3,
+            "line": 24
+          },
+          "APL13": {
+            "page": 2,
+            "line": 15
+          }
+        }
+      },
+      {
+        "bullet": "**Revenue‑code overhaul** – APL 25‑008 replaces legacy HCPCS Z‑codes with national revenue codes (0552, 0650, 0652, 0655, 0656, 0657, 0659), introduces “high” (days 1–60) vs. “low” (day 61+) routine‑home‑care rates, an **automatic 60‑day reset** after a gap in hospice enrollment, and a **service‑intensity add‑on** for nursing and social‑worker visits during the last seven days of life.",
+        "citations": {
+          "APL25": {
+            "page": 12,
+            "line": 1
+          },
+          "APL13": {
+            "page": 11,
+            "line": 1
+          }
+        }
+      },
+      {
+        "bullet": "**Physician‑services billing updated** – Routine and continuous‑home‑care physician visits must now be billed under **Revenue Code 0657**; Z7108 is no longer valid.",
+        "citations": {
+          "APL25": {
+            "page": 12,
+            "line": 8
+          },
+          "APL13": {
+            "page": 11,
+            "line": 10
+          }
+        }
+      },
+      {
+        "bullet": "**Medicare‑parity rate floor** – The 2025 revision explicitly ties hospice payment rates to the Medicare hospice fee schedule, requires plans to adopt CMS’s annual rate update each October 1, and bars reimbursement below the federal rate.",
+        "citations": {
+          "APL25": {
+            "page": 12,
+            "line": 15
+          },
+          "APL13": {
+            "page": 11,
+            "line": 5
+          }
+        }
+      },
+      {
+        "bullet": "**Benefit‑period restatement** – Up‑front clarification that hospice coverage runs for two 90‑day periods followed by unlimited 60‑day periods, harmonizing language with the federal regulation to avoid coverage‑window disputes.",
+        "citations": {
+          "APL25": {
+            "page": 2,
+            "line": 20
+          },
+          "APL13": {
+            "page": 2,
+            "line": 25
+          }
+        }
+      },
+      {
+        "bullet": "**Children / CCS & palliative‑care linkage** – References modernized to EPSDT rules, CCS Newsletter 12‑1119, Whole Child Model APL 24‑015, and ACA § 2302 concurrent‑care rights; also distinguishes hospice “palliative items or services” from the separate Medi‑Cal palliative‑care benefit (APL 18‑020).",
+        "citations": {
+          "APL25": {
+            "page": 10,
+            "line": 12
+          },
+          "APL13": {
+            "page": 7,
+            "line": 5
+          }
+        }
+      },
+      {
+        "bullet": "**Documentation‑driven utilisation review** – No prior authorization is required for routine‑home, continuous‑home or respite care, but plans may **deny, down‑code or recoup** payment if the post‑service record fails to justify the billed level; financial liability for unsupported days rests on the hospice provider.",
+        "citations": {
+          "APL25": {
+            "page": 15,
+            "line": 30
+          },
+          "APL13": {
+            "page": 12,
+            "line": 40
+          }
+        }
+      }
+    ],
+    "Redactions": [
+      {
+        "bullet": "Legacy HCPCS **code Z7108** for physician home visits, listed in APL 13‑014 Section V‑E, is eliminated in the 2025 revision in favor of national Revenue Code 0657.",
+        "citations": {
+          "APL25": null,
+          "APL13": {
+            "page": 11,
+            "line": 10
+          }
+        }
+      }
+    ]
+  },
+  "conclusion": "In short, APL 25‑008 keeps the substantive hospice benefit intact but converts what were largely policy descriptions in 2013 into enforceable process steps, documentation deadlines, revenue‑code logic and FWA safeguards. Plans need to update internal workflows, provider manuals and claims‑edit rules accordingly.",
+  "generated_on": "2025-05-27"
+}
